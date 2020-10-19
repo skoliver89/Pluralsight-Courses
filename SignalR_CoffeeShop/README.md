@@ -1,0 +1,1 @@
+App code is derived from the following course on Puralsight: [Getting Started with ASP.NET Core SignalR](https://app.pluralsight.com/library/courses/aspdotnet-core-signalr-getting-started/table-of-contents) by [Roland Guijt](https://app.pluralsight.com/profile/author/roland-guijt)

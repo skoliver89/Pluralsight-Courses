@@ -1,0 +1,103 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+    <IsPackable>false</IsPackable>
+    <SpaRoot>client-app\</SpaRoot>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Content Remove="$(SpaRoot)**" />
+    <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="client-app\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="client-app\.git\COMMIT_EDITMSG" />
+    <None Include="client-app\.git\config" />
+    <None Include="client-app\.git\description" />
+    <None Include="client-app\.git\HEAD" />
+    <None Include="client-app\.git\hooks\applypatch-msg.sample" />
+    <None Include="client-app\.git\hooks\commit-msg.sample" />
+    <None Include="client-app\.git\hooks\fsmonitor-watchman.sample" />
+    <None Include="client-app\.git\hooks\post-update.sample" />
+    <None Include="client-app\.git\hooks\pre-applypatch.sample" />
+    <None Include="client-app\.git\hooks\pre-commit.sample" />
+    <None Include="client-app\.git\hooks\pre-merge-commit.sample" />
+    <None Include="client-app\.git\hooks\pre-push.sample" />
+    <None Include="client-app\.git\hooks\pre-rebase.sample" />
+    <None Include="client-app\.git\hooks\pre-receive.sample" />
+    <None Include="client-app\.git\hooks\prepare-commit-msg.sample" />
+    <None Include="client-app\.git\hooks\update.sample" />
+    <None Include="client-app\.git\index" />
+    <None Include="client-app\.git\info\exclude" />
+    <None Include="client-app\.git\logs\HEAD" />
+    <None Include="client-app\.git\logs\refs\heads\master" />
+    <None Include="client-app\.git\objects\08\0d6c77ac21bb2ef88a6992b2b73ad93daaca92" />
+    <None Include="client-app\.git\objects\1a\eecad14040479b561e7f8d4bcd29ef2a59d8d7" />
+    <None Include="client-app\.git\objects\1e\1b6fb93dcdd020e2ef890848b07e01bd439c67" />
+    <None Include="client-app\.git\objects\4d\29575de80483b005c29bfcac5061cd2f45313e" />
+    <None Include="client-app\.git\objects\4d\b7ebc25c2d066cd254805af5dda1ed1d2bc819" />
+    <None Include="client-app\.git\objects\54\ef09430b11a9e551ddfe1107287e168c6f0e11" />
+    <None Include="client-app\.git\objects\6b\60c1042f58d9fabb75485aa3624dddcf633b5c" />
+    <None Include="client-app\.git\objects\74\b1a275a0ea7df518f17bcea5375abf003abe55" />
+    <None Include="client-app\.git\objects\74\b5e053450a48a6bdb4d71aad648e7af821975c" />
+    <None Include="client-app\.git\objects\88\99f1657ec1c2e1441bb925b4bc202f159622ad" />
+    <None Include="client-app\.git\objects\93\8ee78be9574a0dbaaacf467a2300cd0b59ff6b" />
+    <None Include="client-app\.git\objects\a4\e47a6545bc15971f8f63fba70e4013df88a664" />
+    <None Include="client-app\.git\objects\aa\069f27cbd9d53394428171c3989fd03db73c76" />
+    <None Include="client-app\.git\objects\b0\4b771a82613a80b0532d7082508763620074bf" />
+    <None Include="client-app\.git\objects\bc\d5dfd67cd0361b78123e95c2dd96031f27f743" />
+    <None Include="client-app\.git\objects\c0\74426ffce6c836c1b7a3e532d241a79d33de9c" />
+    <None Include="client-app\.git\objects\ce\9cbd2946d6962cfc19d65c8cb91757d8f4d4c6" />
+    <None Include="client-app\.git\objects\e9\e57dc4d41b9b46e05112e9f45b7ea6ac0ba15e" />
+    <None Include="client-app\.git\objects\ec\2585e8c0bb8188184ed1e0703c4c8f2a8419b0" />
+    <None Include="client-app\.git\objects\f5\185c1ec7a5dccf30b55a8e3f89afc3eca764a1" />
+    <None Include="client-app\.git\objects\fb\bd38e5ab0cbe2c196bdbd1b553764c2c003d65" />
+    <None Include="client-app\.git\objects\fc\44b0a3796c0e0a64c3d858ca038bd4570465d9" />
+    <None Include="client-app\.git\refs\heads\master" />
+    <None Include="client-app\package-lock.json" />
+    <None Include="client-app\package.json" />
+    <None Include="client-app\public\manifest.json" />
+  </ItemGroup>
+
+  <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
+    <!-- Ensure Node.js is installed -->
+    <Exec Command="node --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+    <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+  </Target>
+
+  <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
+    <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build" />
+
+    <!-- Include the newly-built files in the publish output -->
+    <ItemGroup>
+      <DistFiles Include="$(SpaRoot)build\**" />
+      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+        <RelativePath>%(DistFiles.Identity)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+  </Target>
+
+</Project>
