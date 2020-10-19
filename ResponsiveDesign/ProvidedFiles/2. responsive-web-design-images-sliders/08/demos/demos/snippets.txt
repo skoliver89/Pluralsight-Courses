@@ -1,0 +1,103 @@
+<article class="llgallery" id="scrollPane">
+	
+<figure><picture>
+	<source media="(min-width: 35rem)" data-srcset="gallery/betSheanA_1200.jpg" >
+
+	<img
+		class="lazy" alt="My Photo"
+		data-src="gallery/betSheanA_560.jpg"
+	>
+</picture></figure>
+	
+<figure><picture>
+	<source media="(min-width: 35rem)" data-srcset="gallery/tiberius_1200.jpg" >
+
+	<img
+		class="lazy" alt="My Photo"
+		data-src="gallery/tiberius_560.jpg"
+	>
+</picture></figure>
+	
+<figure><picture>
+	<source media="(min-width: 35rem)" data-srcset="gallery/betSheanB_1200.jpg" >
+
+	<img
+		class="lazy" alt="My Photo"
+		data-src="gallery/betSheanB_560.jpg"
+	>
+</picture></figure>
+	
+<figure><picture>
+	<source media="(min-width: 35rem)" data-srcset="gallery/betSheanC_1200.jpg" >
+
+	<img
+		class="lazy" alt="My Photo"
+		data-src="gallery/betSheanC_560.jpg"
+	>
+</picture></figure>
+	
+<figure><picture>
+	<source media="(min-width: 35rem)" data-srcset="gallery/caesareaA_1200.jpg" >
+
+	<img
+		class="lazy" alt="My Photo"
+		data-src="gallery/caesareaA_560.jpg"
+	>
+</picture></figure>
+	
+<figure><picture>
+	<source media="(min-width: 35rem)" data-srcset="gallery/caesareaB_1200.jpg" >
+
+	<img
+		class="lazy" alt="My Photo"
+		data-src="gallery/caesareaB_560.jpg"
+	>
+</picture></figure>
+	
+<figure><picture>
+	<source media="(min-width: 35rem)" data-srcset="gallery/jaffa_1200.jpg" >
+
+	<img
+		class="lazy" alt="My Photo"
+		data-src="gallery/jaffa_560.jpg"
+	>
+</picture></figure>
+	
+<figure><picture>
+	<source media="(min-width: 35rem)" data-srcset="gallery/masada_1200.jpg" >
+
+	<img
+		class="lazy" alt="My Photo"
+		data-src="gallery/masada_560.jpg"
+	>
+</picture></figure>
+	
+<figure><picture>
+	<source media="(min-width: 35rem)" data-srcset="gallery/mosk_1200.jpg" >
+
+	<img
+		class="lazy" alt="My Photo"
+		data-src="gallery/mosk_560.jpg"
+	>
+</picture></figure>
+	
+<figure><picture>
+	<source media="(min-width: 35rem)" data-srcset="gallery/rideCamel_1200.jpg" >
+
+	<img
+		class="lazy" alt="My Photo"
+		data-src="gallery/rideCamel_560.jpg"
+	>
+</picture></figure>
+	
+<figure><picture>
+	<source media="(min-width: 35rem)" data-srcset="gallery/sermon_1200.jpg" >
+
+	<img
+		class="lazy" alt="My Photo"
+		data-src="gallery/sermon_560.jpg"
+	>
+</picture></figure>
+  
+
+ </article>

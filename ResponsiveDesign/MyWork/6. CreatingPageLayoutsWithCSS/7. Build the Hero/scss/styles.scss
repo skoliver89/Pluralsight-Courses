@@ -1,0 +1,20 @@
+// Make site look similar on all types of browsers.
+@import "normalize";
+
+// Variables used in other SCSS files to simplify future changes.
+@import "vars";
+
+// Applies to all screen sizes
+@import "small-default";
+
+// Applies to tablets and bigger
+// 1 rem === root element (html) font-size (16px)
+@media only screen and (min-width: 30.0625rem) {
+  @import "medium";
+}
+
+// Applies to Desktops (full screen) and bigger
+// 1 rem === root element (html) font-size (16px)
+@media only screen and (min-width: 64.0625rem) {
+  @import "large";
+}

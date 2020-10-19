@@ -1,0 +1,46 @@
+/*  ------------- NAV -------------  */
+nav {
+  ul {
+    margin-left: 2%;
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+  }
+  ul li {
+    width: auto;
+  } // end li
+  ul li:last-child {
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+  }
+  ul li a {
+    padding: 0.5rem 1rem;
+  } // and a
+} // end nav
+
+/*  ------------- MAIN -------------  */
+main {
+  margin: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  div.teaser {
+    &.lead {
+      @include defineGrid(1, 2, 1, 2);
+    }
+    &.secondTop {
+      @include defineGrid(1, 1, 3, 2);
+    }
+    &.secondBottom {
+      @include defineGrid(2, 1, 3, 2);
+    }
+    &.ie_grid1 {
+      @include ieGridPosFix(3, 1);
+    }
+    &.ie_grid2 {
+      @include ieGridPosFix(3, 2);
+    }
+    &.ie_grid3 {
+      @include ieGridPosFix(3, 3);
+    }
+    &.ie_grid4 {
+      @include ieGridPosFix(3, 4);
+    }
+  }
+} // end main

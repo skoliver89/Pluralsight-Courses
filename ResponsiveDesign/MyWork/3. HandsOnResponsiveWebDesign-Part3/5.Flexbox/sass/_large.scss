@@ -1,0 +1,34 @@
+/*  ------------- NAV -------------  */
+nav {
+  ul {
+    margin-left: 2%;
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+
+    li {
+      @include addFlexBasis(auto, true);
+
+      &:last-child {
+        border-right: 1px solid rgba(0, 0, 0, 0.3);
+      }
+
+      a {
+        padding: 0.5rem 1rem;
+      } // and a
+    } // end li
+  }
+} // end nav
+
+/*  ------------- MAIN -------------  */
+main {
+  div.container1 {
+    div {
+      @include addFlexBasis(33.333%, false);
+    } // end div
+  } // end div.container1
+
+  div.container2 {
+    figure {
+      @include addFlexBasis(25%, false);
+    }
+  }
+} // end main

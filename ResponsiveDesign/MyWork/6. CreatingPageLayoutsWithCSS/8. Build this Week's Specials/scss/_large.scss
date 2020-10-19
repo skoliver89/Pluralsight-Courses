@@ -1,0 +1,20 @@
+// ---- GRID ---- //
+// Create column sizing classes with a loop
+div.row section.col {
+  @for $i from 1 through 12 {
+    $w: ($i / 12) * 100%;
+    &.lg-#{$i} {
+      width: $w;
+    }
+  }
+}
+
+// ---- NAV ---- //
+nav ul#primaryNav {
+  li {
+    width: auto;
+    a {
+      padding: 0.7rem 1rem;
+    } // end a
+  } // end li
+} // end primaryNav

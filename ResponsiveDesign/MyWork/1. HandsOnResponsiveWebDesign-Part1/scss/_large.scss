@@ -1,0 +1,51 @@
+// -------------------- BODY -------------------- //
+body {
+}
+// -------------------- NAV -------------------- //
+nav {
+  ul {
+    margin-left: $gutter;
+
+    li {
+      width: auto;
+      a {
+        padding: 0.5rem 1rem;
+      } // End of a
+
+      &:first-child {
+        border-left: 1px solid rgba(0, 0, 0, 0.3);
+      }
+      &:last-child {
+        border-right: 1px solid rgba(0, 0, 0, 0.3);
+      }
+    } // End of li
+  } // End of ul
+} // End of nav
+
+// -------------------- MAIN -------------------- //
+main {
+  figure.photo {
+    width: 25% - $gutterDbl;
+    float: left;
+  } // End of figure.photo
+
+  div.blog {
+    article {
+      float: left;
+      width: 33.33% - $gutterDbl;
+
+      &:nth-child(2n + 1) {
+        clear: none;
+      } // End of &:nth-child(2n + 1)
+
+      &:nth-child(3n + 1) {
+        clear: left;
+      } // End of &:nth-child(3n + 1)
+    } // End of article
+  } // End of div.blog
+
+  section {
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+} // End of main

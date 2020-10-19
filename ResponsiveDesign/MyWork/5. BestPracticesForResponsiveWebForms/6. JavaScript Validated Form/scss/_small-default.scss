@@ -1,0 +1,337 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/*  apply a natural box layout model to all elements  */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*  ----------------------- BODY --------------------------- */
+body {
+  font-family: $defaultFont;
+  font-weight: $normalWeight;
+  font-size: 16px;
+}
+
+/*  ----------------------- HEADER --------------------------- */
+div#headerWrapper {
+  background-color: $lightGrey;
+}
+header {
+  color: $primaryColor;
+  padding: 1em $gutter;
+  position: relative;
+  form {
+    float: right;
+    input {
+      width: 8em;
+      border-radius: 10px;
+      margin-right: 2%;
+      padding: 0.4rem;
+      border: none;
+      font-size: 1em;
+    } // end input
+  } //end form
+
+  h1 {
+    font-size: 2rem;
+    font-weight: $normalWeight;
+    position: absolute;
+    bottom: 1em;
+    left: 95px;
+    padding-left: 2%;
+    padding-left: 2vw;
+  } // end of h1
+} // end of header
+
+/*  ----------------------- NAVIGATION --------------------------- */
+div#navWrapper {
+  background-color: $fontColor;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+nav {
+  ul li {
+    float: left;
+    width: 25%;
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+  } // end of li
+
+  ul li:last-child {
+    border-right: none;
+  }
+
+  ul li a {
+    display: block;
+    text-align: center;
+    font-weight: $normalWeight;
+    font-size: 0.9em;
+    padding: 0.9rem 0;
+    color: $lightGrey;
+    text-decoration: none;
+    transition: background 0.75s ease, color 0.75s ease;
+  } // end of anchors
+
+  ul li.active a {
+    background-color: darken($secondaryColor, 10%);
+  } // end of active
+
+  ul li a:hover {
+    background-color: $primaryColor;
+  }
+} // end nav
+
+/*  ----------------------- MAIN --------------------------- */
+main {
+  h1 {
+    font-size: 2em;
+    margin: 1rem 0 0 $gutter;
+    color: $primaryColor;
+  } // end h1
+
+  p {
+    line-height: 130%;
+    color: $fontColor;
+  } // end p
+
+  form {
+    margin: 1em $gutter;
+    max-width: 400px;
+
+    label {
+      display: block;
+    }
+
+    // Styling for the user instructions for each input
+    section div {
+      color: #777;
+      font-size: 0.75rem;
+      padding: 0.3rem 0 0.1rem 0.2rem;
+      margin-top: 2rem;
+    }
+
+    // Styling for each input (text and select)
+    .myInput {
+      width: 100%;
+      font-size: 1rem;
+      color: $secondaryColor;
+      padding: 0.75em;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      border-radius: 3px;
+      background-color: #fbfbfb;
+    }
+
+    .sbs {
+      margin-left: 0.75rem;
+    }
+
+    // error instructions at the top of the page
+    section#formProblems {
+      display: none;
+
+      &.error {
+        display: block;
+        border: 1px solid #f00;
+        background-color: rgba(255, 0, 0, 0.3);
+        padding: 0.3rem $gutter;
+      }
+    }
+
+    // Additional details to fill out each input correctly (hidden by default)
+    section {
+      span {
+        display: none;
+      }
+
+      &.error {
+        span {
+          display: block;
+          font-size: 0.75rem;
+          color: red;
+          padding-left: 0.2rem;
+        }
+
+        div {
+          background-color: rgba(255, 0, 0, 0.3);
+        }
+      }
+    }
+
+    input.submitBtn {
+      -webkit-appearance: none; /*remove the Safari mobile default styling*/
+      -moz-appearance: none; /*remove the Firefox mobile default styling*/
+      border: none;
+      background-color: $secondaryColor;
+      color: white;
+      font-weight: $normalWeight;
+      font-size: 1.5em;
+      border-radius: 1em;
+      padding: 0.2em;
+      margin-top: 1rem;
+      width: 100%;
+    } // end input button
+  } // end form
+} // end main
+
+/*  ----------------------- FOOTER --------------------------- */
+div#footerWrapper {
+  background-color: $fontColor;
+}
+footer {
+  width: 100%;
+
+  p {
+    text-align: center;
+    color: $lightGrey;
+    padding: 0.75rem 0;
+    font-size: 0.9rem;
+  } // end p
+
+  p a {
+    color: $lightGrey;
+  }
+
+  section {
+    h3 {
+      color: $lightGrey;
+      font-size: 0.8em;
+      font-weight: $boldWeight;
+      margin-top: 1em;
+      padding: 0.3em 0;
+      background-color: rgba(0, 0, 0, 0.2);
+      text-align: center;
+    } // end h3
+    ul li {
+      list-style: none;
+    }
+    ul li a {
+      display: block;
+      color: darken($lightGrey, 10%);
+      text-decoration: none;
+      font-size: 0.9em;
+      padding: 0.5em $gutter;
+    } //end li a
+  } // end section
+} // end footer
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* custom loader animation */
+@keyframes jump {
+  0% {
+    transform: scaleY(0.8);
+  }
+  100% {
+    transform: translateY(-75px);
+  }
+}
+@keyframes shrink {
+  100% {
+    transform: scaleX(0.5);
+    opacity: 0.01;
+  }
+}
+div.paypalProcessing {
+  display: table;
+  width: 100%;
+
+  margin: 0 0 1.25em 0;
+
+  div.animation {
+    display: table-row;
+    height: 50%;
+    width: 100%;
+
+    div.container {
+      display: table-cell;
+      height: 150px;
+      width: 135px;
+      text-align: center;
+      vertical-align: bottom;
+
+      div.balls {
+        height: 50px;
+        width: 135px;
+        margin: auto;
+
+        div.ball {
+          width: 20px;
+          position: relative;
+          display: inline-block;
+          margin: 5px;
+          height: 20px;
+          border-radius: 50%;
+          z-index: 999;
+          background-color: cornflowerblue;
+
+          &.ball-one {
+            animation: jump 0.5s ease 0s infinite alternate;
+          }
+
+          &.ball-two {
+            animation: jump 0.5s ease 0.15s infinite alternate;
+          }
+
+          &.ball-three {
+            animation: jump 0.5s ease 0.25s infinite alternate;
+          }
+
+          &.ball-four {
+            animation: jump 0.5s ease 0.35s infinite alternate;
+          }
+        }
+
+        div.shadow {
+          position: relative;
+          opacity: 0.1;
+          bottom: 20px;
+          width: 20px;
+          height: 5px;
+          border-radius: 50%;
+          background-color: black;
+          display: inline-block;
+          margin: 5px;
+
+          &.shadow-one {
+            animation: shrink 0.5s ease 0s infinite alternate;
+          }
+
+          &.shadow-two {
+            animation: shrink 0.5s ease 0.15s infinite alternate;
+          }
+
+          &.shadow-three {
+            animation: shrink 0.5s ease 0.25s infinite alternate;
+          }
+
+          &.shadow-three {
+            animation: shrink 0.5s ease 0.25s infinite alternate;
+          }
+
+          &.shadow-four {
+            animation: shrink 0.5s ease 0.35s infinite alternate;
+          }
+        }
+      }
+    }
+  }
+  div.text {
+    display: table-row;
+    text-align: center;
+
+    h1 {
+      display: table-cell;
+      vertical-align: middle;
+      color: #191919;
+    }
+  }
+}

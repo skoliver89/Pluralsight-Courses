@@ -1,0 +1,18 @@
+// -------------------- MAIN -------------------- //
+main {
+  figure.photo {
+    width: 50% - $gutterDbl;
+    float: left;
+  } // End of figure.photo
+
+  div.blog {
+    article {
+      float: left;
+      width: 50% - $gutterDbl;
+
+      &:nth-child(2n + 1) {
+        clear: left;
+      } // End of &:nth-child(2n + 1)
+    } // End of article
+  } // End of div.blog
+} // End of main

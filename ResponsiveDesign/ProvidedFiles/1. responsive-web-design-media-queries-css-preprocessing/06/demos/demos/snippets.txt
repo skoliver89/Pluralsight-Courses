@@ -1,0 +1,48 @@
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+
+
+
+
+   <h2>Blog Topics</h2>
+   <div class="blog">
+		<article>
+			<h3>Topic 1</h3>
+			<p>Elementum, sagittis adipiscing, nec et? Ridiculus, porta placerat ultrices odio diam in, urna phasellus in ac egestas egestas nunc, pellentesque, non porta, nisi turpis. Ultricies integer sociis etiam ultrices dis facilisis nascetur. Pellentesque cursusnon porta, nisi turpis. Ultricies integer sociis etiam ultrices dis facilisis nascetur. Pellentesque cursus integer mauris augue enim. Add additional words so that it is taller than the one to the right.</p>
+		</article>
+   <article>
+			<h3>Topic 2</h3>
+			<p>Elementum, sagittis adipiscing, nec et? Ridiculus, porta placerat ultrices odio diam in, urna phasellus in ac egestas egestas nunc, pellentesque, non porta, nisi turpis. Ultricies integer sociis etiam ultrices dis facilisis nascetur. Pellentesque cursus integer mauris augue enim</p>
+		</article>
+   <article>
+			<h3>Topic 3</h3>
+			<p>Elementum, sagittis adipiscing, nec et? Ridiculus, porta placerat ultrices odio diam in, urna phasellus in ac egestas egestas nunc, pellentesque, non porta, nisi turpis. Ultricies integer sociis etiam ultrices dis facilisis nascetur. Pellentesque cursus integer mauris augue enimElementum, sagittis adipiscing, nec et? Ridiculus, porta placerat ultrices odio diam in, urna phasellus in ac egestas egestas nunc, pellentesque, non porta, nisi turpis. Ultricies integer sociis etiam ultrices dis facilisis nascetur. Pellentesque cursus integer mauris augue enim</p>
+		</article>
+   <article>
+			<h3>Topic 4</h3>
+			<p>Elementum, sagittis adipiscing, nec et? Ridiculus, porta placerat ultrices odio diam in, urna phasellus in ac egestas egestas nunc, pellentesque, non porta, nisi turpis. Ultricies integer sociis etiam ultrices dis facilisis nascetur. Pellentesque cursus integer mauris augue enim</p>
+		</article>
+   <article>
+			<h3>Topic 5</h3>
+			<p>Elementum, sagittis adipiscing, nec et? Ridiculus, porta placerat ultrices odio diam in, urna phasellus in ac egestas egestas nunc, pellentesque, non porta, nisi turpis. Ultricies integer sociis etiam ultrices dis facilisis nascetur. Pellentesque cursus integer mauris augue enim</p>
+		</article>
+   <article>
+			<h3>Topic 6</h3>
+			<p>Elementum, sagittis adipiscing, nec et? Ridiculus, porta placerat ultrices odio diam in, urna phasellus in ac egestas egestas nunc, pellentesque, non porta, nisi turpis. Ultricies integer sociis etiam ultrices dis facilisis nascetur. Pellentesque cursus integer mauris augue enim</p>
+		</article>
+   <article>
+			<h3>Topic 7</h3>
+			<p>Elementum, sagittis adipiscing, nec et? Ridiculus, porta placerat ultrices odio diam in, urna phasellus in ac egestas egestas nunc, pellentesque, non porta, nisi turpis. Ultricies integer sociis etiam ultrices dis facilisis nascetur. Pellentesque cursus integer mauris augue enim</p>
+		</article>
+   <article>
+			<h3>Topic 8</h3>
+			<p>Elementum, sagittis adipiscing, nec et? Ridiculus, porta placerat ultrices odio diam in, urna phasellus in ac egestas egestas nunc, pellentesque, non porta, nisi turpis. Ultricies integer sociis etiam ultrices dis facilisis nascetur. Pellentesque cursus integer mauris augue enim</p>
+		</article>
+		</div> <!-- end of blog -->

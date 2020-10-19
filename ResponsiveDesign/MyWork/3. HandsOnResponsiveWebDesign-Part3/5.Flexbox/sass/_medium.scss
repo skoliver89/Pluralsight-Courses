@@ -1,0 +1,14 @@
+/*  ------------- MAIN -------------  */
+main {
+  div.container1 {
+    div {
+      @include addFlexBasis(50%, false);
+    } // end div
+  } // end div.container1
+
+  div.container2 {
+    figure {
+      @include addFlexBasis(33.333%, false);
+    }
+  }
+} // end main

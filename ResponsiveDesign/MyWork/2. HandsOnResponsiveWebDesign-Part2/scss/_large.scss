@@ -1,0 +1,47 @@
+/* ------------- HEADER ------------- */
+header {
+  background-image: url(../images/header1600.jpg),
+    url(../images/headerRepeat.jpg);
+  background-repeat: no-repeat, repeat-x;
+}
+
+/*  ------------- NAV -------------  */
+nav {
+  ul {
+    margin-left: 2%;
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+  }
+  ul li {
+    width: auto;
+  } // end li
+  ul li:last-child {
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+  }
+  ul li a {
+    padding: 0.5rem 1rem;
+  } // and a
+} // end nav
+
+/* ------------- MAIN ------------- */
+main {
+  // index3 specific
+  // article {
+  //   &.multiCol {
+  //     column-count: 3;
+  //     -webkit-column-count: 3;
+  //     -moz-column-count: 3;
+  //   }
+  // }
+
+  // index4 specific
+  // figure.photoB {
+  //   width: 50%;
+  // }
+
+  // figure.photoA,
+  // figure.photoB {
+  //   margin-bottom: 1rem;
+  // }
+
+  max-width: 100rem;
+}

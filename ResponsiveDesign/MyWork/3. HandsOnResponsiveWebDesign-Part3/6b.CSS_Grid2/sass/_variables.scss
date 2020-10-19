@@ -1,0 +1,27 @@
+$primaryColor: #302b27;
+$secondaryColor: #baa256;
+$fontColor: #dce2eb;
+
+$defaultFont: "Lato", sans-serif;
+$normalWeight: 300;
+$boldWeight: 700;
+
+$gutter: 2%;
+$gutterdbl: (2 * $gutter);
+
+@mixin defineGrid($row: 1, $rowSpan: 1, $col: 1, $colSpan: 1) {
+  // Modern Browser lines
+  grid-row: $row / span $rowSpan;
+  grid-column: $col / span $colSpan;
+
+  // IE Browser lines
+  -ms-grid-row: $row;
+  -ms-grid-row-span: $rowSpan;
+  -ms-grid-column: $col;
+  -ms-grid-column-span: $colSpan;
+}
+
+@mixin ieGridPosFix($row: 1, $col: 1) {
+  -ms-grid-row: $row;
+  -ms-grid-column: $col;
+}

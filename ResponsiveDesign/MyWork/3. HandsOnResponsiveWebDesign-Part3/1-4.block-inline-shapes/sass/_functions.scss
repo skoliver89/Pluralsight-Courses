@@ -1,0 +1,9 @@
+// Get the social icon's position in the sprite image (0-based)
+// $col => the 0-based column number of the icon
+// $white => boolean flag to get the white version
+@function getSocialIconPos($col: 0, $white: false) {
+  $x: -($socialIconSize * $col);
+  $y: if($white, -$socialIconSize, 0);
+
+  @return $x $y;
+}

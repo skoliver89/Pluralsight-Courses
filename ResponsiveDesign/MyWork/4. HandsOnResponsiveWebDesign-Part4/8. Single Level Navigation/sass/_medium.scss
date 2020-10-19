@@ -1,0 +1,32 @@
+/* Body  */
+body {
+  grid-template-columns: 9rem auto;
+  grid-template-areas: "logo logo" "links content" "footer footer";
+}
+
+/* Navigation  */
+div#navBar,
+nav div a.hamburgerClose {
+  display: none;
+}
+
+nav {
+  height: auto;
+
+  // ul li a {
+  //   text-align: right;
+  // }
+}
+
+/* MAIN  */
+main {
+  h1 {
+    font-size: 5rem;
+  }
+  .box {
+    font-size: 2rem;
+  }
+  .box span {
+    font-size: 1.5rem;
+  }
+} // end main

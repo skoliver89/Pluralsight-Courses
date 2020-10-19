@@ -1,0 +1,22 @@
+<!-- PAGE HEADER GOES HERE -->
+    <header>
+    
+    </header>
+
+    
+<!-- PAGE NAVIGATION GOES HERE -->
+    <header>
+    
+    </header>
+    
+    
+<!-- PAGE CONTENT GOES HERE -->
+    <main>
+    
+    </main>
+    
+    
+<!-- PAGE FOOTER GOES HERE -->
+    <header>
+    
+    </header>

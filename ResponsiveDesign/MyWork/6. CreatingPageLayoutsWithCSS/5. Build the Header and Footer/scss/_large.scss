@@ -1,0 +1,8 @@
+div.row section.col {
+  @for $i from 1 through 12 {
+    $w: ($i / 12) * 100%;
+    &.lg-#{$i} {
+      width: $w;
+    }
+  }
+}

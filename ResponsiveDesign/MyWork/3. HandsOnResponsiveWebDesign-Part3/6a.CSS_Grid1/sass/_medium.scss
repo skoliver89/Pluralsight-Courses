@@ -1,0 +1,16 @@
+/*-----HEADER SOCIAL ICONS-----*/
+header {
+} // end header
+
+/*  ------------- MAIN -------------  */
+main {
+  div.parent {
+    grid-template-columns: 1fr 1fr 1fr;
+    article {
+      &:nth-child(1) {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 2;
+      }
+    }
+  }
+} // end main

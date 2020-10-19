@@ -1,0 +1,48 @@
+$primaryColor: #302b27;
+$secondaryColor: #baa256;
+$fontColor: #dce2eb;
+
+$defaultFont: "Lato", sans-serif;
+$normalWeight: 300;
+$boldWeight: 700;
+
+$gutter: 2%;
+$gutterDbl: (2 * $gutter);
+
+/* -------- MIXINS -------- */
+
+@mixin gradient($startColor, $endColor) {
+  background: $startColor; /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    $startColor 0%,
+    $endColor 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    $startColor 0%,
+    $endColor 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    $startColor 0%,
+    $endColor 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$endColor', endColorstr='$endColor',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin addFlex() {
+  display: flex;
+  display: -ms-flexbox;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+}
+
+@mixin addFlexBasis($width, $noGutter) {
+  flex-basis: $width;
+  -ms-flex: if(
+    $width == auto,
+    none,
+    if($noGutter, $width, $width - $gutterDbl)
+  );
+}

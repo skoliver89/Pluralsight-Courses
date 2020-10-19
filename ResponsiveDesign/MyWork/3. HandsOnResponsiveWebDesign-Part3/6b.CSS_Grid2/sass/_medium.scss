@@ -1,0 +1,22 @@
+/*-----HEADER SOCIAL ICONS-----*/
+header {
+} // end header
+
+/*  ------------- MAIN -------------  */
+main {
+  div.teaser {
+    &.lead {
+      @include defineGrid(1, 2, 1, 1);
+    }
+    &.secondTop {
+      @include defineGrid(1, 1, 2, 1);
+      -ms-grid-row-align: start;
+      align-self: start;
+    }
+    &.secondBottom {
+      @include defineGrid(2, 1, 2, 1);
+      align-self: end;
+      -ms-grid-row-align: end;
+    }
+  }
+} // end main

@@ -1,0 +1,21 @@
+header {
+  h1 {
+    font-size: 2.85rem;
+  } // end h1
+  h2 {
+    font-size: 1.5rem;
+  } // end h2
+  img {
+    height: 100px;
+  } // end img
+} // end header
+
+// Create column sizing classes with a loop
+div.row section.col {
+  @for $i from 1 through 12 {
+    $w: ($i / 12) * 100%;
+    &.md-#{$i} {
+      width: $w;
+    }
+  }
+}
